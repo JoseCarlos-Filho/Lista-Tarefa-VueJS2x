@@ -1,8 +1,10 @@
 <template>
     <div class="task-grid">
-        <!-- v-for gera as divs com as tarefas.-->
-        <TaskState v-for="task in tasks" :key="task.name" :task="task"></TaskState>
-        
+        <template v-if="tasks.length">
+            <!-- v-for gera as divs com as tarefas.-->
+            <TaskState v-for="task in tasks" :key="task.name" :task="task" class="task"></TaskState>
+        </template>
+        <p v-else class="no-task">Nenhuma tarefa registrada!</p>
     </div>
 
 </template>
@@ -19,5 +21,5 @@ export default {
 </script>
 
 <style>
-
+@import '../estilosToDoList/taskgrid.sass';
 </style>
