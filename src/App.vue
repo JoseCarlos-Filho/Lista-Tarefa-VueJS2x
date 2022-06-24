@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
 		<h1>Tarefas</h1>
-    <NewTask />
+    <NewTask @tarefaAdicionado="adicionarTarefa"/>
     <TaskGrid :tasks="tasks"/>
 	</div>
 </template>
@@ -19,6 +19,19 @@ export default {
          { name: 'Lavar a louça', pending: false },
          { name: 'Comprar blusa', pending: true }
       ]
+    }
+  },
+  methods: {
+    adicionarTarefa(task) {
+      const algumNome = t => t.name === task.name;
+      const realmenteNovo = this.tasks.filter(algumNome).length == 0;
+
+      if(realmenteNovo) {
+        this.tasks.push({
+          name: task.name,
+          pending: task.pending || true
+        })
+      }
     }
   }
 }
