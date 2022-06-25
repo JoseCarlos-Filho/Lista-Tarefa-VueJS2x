@@ -25,7 +25,7 @@ export default {
     adicionarTarefa(task) {
       const algumNome = t => t.name === task.name;
       const realmenteNovo = this.tasks.filter(algumNome).length == 0;
-
+      // validação para não inserir itens duplicados(tarefas) na lista. 
       if(realmenteNovo) {
         this.tasks.push({
           name: task.name,

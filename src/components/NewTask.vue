@@ -1,7 +1,8 @@
 <template>
     <div class="new-task">
-        <input v-model="name" @keydown.enter="adicionar" type="text">
-        <button @click="adicionar">+</button>    
+        <input v-model="name" @keydown.enter="adicionar" type="text"
+            class="form-element" placeholder="Nova Tarefa?">
+        <button @click="adicionar" class="form-element">+</button>    
     </div>
 </template>
 
@@ -22,5 +23,5 @@ export default {
 </script>
 
 <style>
-
+@import '../estilosToDoList/newtask.sass';
 </style>
