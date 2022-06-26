@@ -1,8 +1,10 @@
 <template>
     <!-- nesta div é chamada a propriendade computada stateClass -->
-    <div class="task-state" 
-    :class="stateClass">
-        <span @click="$emit('apagaTarefa', task)" class="close">x</span>
+    <div 
+        @click="$emit('mudaEstadoTarefa', task)"
+        class="task-state" 
+        :class="stateClass">
+        <span @click.stop="$emit('apagaTarefa', task)" class="close">x</span>
         <!-- Interpolação da tarefa posteriormente tratada como objeto em props -->
         <p>{{ task.name }}</p>
     </div>

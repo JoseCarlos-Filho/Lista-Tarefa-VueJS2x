@@ -2,8 +2,9 @@
 	<div id="app">
 		<h1>Tarefas</h1>
     <NewTask @tarefaAdicionado="adicionarTarefa"/>
-    <TaskGrid @apagaTarefa="tarefaApaga"
-      :tasks="tasks"/>
+    <TaskGrid :tasks="tasks"
+      @mudaEstadoTarefa="marcaEstadoTarefa"
+      @apagaTarefa="tarefaApaga" />
 	</div>
 </template>
 
@@ -17,8 +18,8 @@ export default {
   data() {
     return {
       tasks: [
-         { name: 'Lavar a louça', pending: false },
-         { name: 'Comprar blusa', pending: true }
+        //  { name: 'Lavar a louça', pending: false },
+        //  { name: 'Comprar blusa', pending: true }
       ]
     }
   },
@@ -37,6 +38,10 @@ export default {
 
     tarefaApaga(indice) {
       this.tasks.splice(indice, 1);
+    },
+
+    marcaEstadoTarefa(indice) {
+      this.tasks[indice].pending = !this.tasks[indice].pending;
     }
   }
 }
