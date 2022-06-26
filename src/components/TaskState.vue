@@ -2,6 +2,7 @@
     <!-- nesta div é chamada a propriendade computada stateClass -->
     <div class="task-state" 
     :class="stateClass">
+        <span class="close">x</span>
         <!-- Interpolação da tarefa posteriormente tratada como objeto em props -->
         <p>{{ task.name }}</p>
     </div>
