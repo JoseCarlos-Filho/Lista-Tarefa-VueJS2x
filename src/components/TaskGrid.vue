@@ -2,7 +2,8 @@
     <div class="task-grid">
         <template v-if="tasks.length">
             <!-- v-for gera as divs com as tarefas.-->
-            <TaskState v-for="task in tasks" :key="task.name" :task="task" class="task"></TaskState>
+            <TaskState v-for="(task, indice) in tasks" :key="task.name" :task="task" class="task"
+                @apagaTarefa="$emit('apagaTarefa', indice)"></TaskState>
         </template>
         <p v-else class="no-task">Nenhuma tarefa registrada!</p>
     </div>

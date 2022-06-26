@@ -2,7 +2,8 @@
 	<div id="app">
 		<h1>Tarefas</h1>
     <NewTask @tarefaAdicionado="adicionarTarefa"/>
-    <TaskGrid :tasks="tasks"/>
+    <TaskGrid @apagaTarefa="tarefaApaga"
+      :tasks="tasks"/>
 	</div>
 </template>
 
@@ -32,6 +33,10 @@ export default {
           pending: task.pending || true
         })
       }
+    },
+
+    tarefaApaga(indice) {
+      this.tasks.splice(indice, 1);
     }
   }
 }
