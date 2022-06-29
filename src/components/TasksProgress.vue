@@ -7,10 +7,13 @@
 
 <script>
 export default {
+    props: { 
+        progress: { type: Number, default: 0}
+    }
 
 }
 </script>
 
 <style>
-
+@import '../estilosToDoList/tasksprogress.sass';
 </style>
