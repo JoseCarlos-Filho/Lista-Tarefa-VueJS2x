@@ -14,7 +14,7 @@
 export default {
     props: { 
         task: { type: Object, required: true },
-    },
+    },  
     computed: {
         stateClass() {
             return {
