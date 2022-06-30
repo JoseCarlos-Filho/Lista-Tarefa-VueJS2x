@@ -32,6 +32,11 @@ export default {
       return Math.round(done / total * 100) || 0;
     }
   },
+  watch: { 
+    tasks() {
+      localStorage.setItem('tasks', JSON.stringify(this.tasks));
+    }
+  },
 
   methods: {
     adicionarTarefa(task) {
