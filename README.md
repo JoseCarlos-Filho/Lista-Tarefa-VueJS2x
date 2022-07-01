@@ -1,6 +1,6 @@
 # Projeto Lista de Tarefas
 
-![Projeto Lista-Tarefa-VueJS2x](./src/assets/desktop-image1.png)
+![Projeto Lista-Tarefa-VueJS2x](./src/assets/desktop-image2.jpg)
 
 ## Conteúdo
 

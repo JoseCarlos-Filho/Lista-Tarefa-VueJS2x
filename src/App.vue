@@ -56,7 +56,10 @@ export default {
       const algumNome = t => t.name === task.name;
       const realmenteNovo = this.tasks.filter(algumNome).length == 0;
       // validação para não inserir itens duplicados(tarefas) na lista. 
-      if(realmenteNovo) {
+      // valida campo vazio.
+      if(task.name == "") {
+        alert("Tarefa inválida digite alguma tarefa!");
+      } else if(realmenteNovo) {
         this.tasks.push({
           name: task.name,
           pending: task.pending || true
