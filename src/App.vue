@@ -3,7 +3,8 @@
 		<h1>Tarefas</h1>
     <TasksProgress :progress="progress" />
     <NewTask @tarefaAdicionado="adicionarTarefa"/>
-    <TaskGrid :tasks="tasks"
+    <TaskGrid 
+      :tasks="tasks"
       @mudaEstadoTarefa="marcaEstadoTarefa"
       @apagaTarefa="tarefaApaga" />
 	</div>
