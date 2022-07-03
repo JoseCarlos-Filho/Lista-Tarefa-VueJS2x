@@ -14,20 +14,20 @@
 
 ## Deploy
 
-- deploy: [Aplicativo Citações](https://jose-carlos-citacoes-componentes-avancados.netlify.app/)
+- deploy: [Aplicativo Lista de Tarefas](https://jose-carlos-todolist-vue2x.netlify.app/)
 
 ## Resumo
 
-Aplicação que utiliza componentes avançados do Vue.JS mostrando conteudo de forma dinâmica escondendo conteudo entre <divs>.
+Aplicação de listas de tarefas do dia a dia podendo ser apagada, selecionada como feito ou pendente.
 
 ## Descrição
 
-Aplicação desenvolvida em Vue.JS, HTML5, CSS3, JavaScript utilizando componentes avançados como a tag 
-<slot> e slot nomeados ex: "<h6 slot="fonte">{{ citacoes[indice].fonte }}</h6>" .
+Aplicação desenvolvida em Vue.JS, HTML5, CSS3, JavaScript, SASS utilizando os conceitos avançados de comunicação entre componentes.
+Utilização de eventos, arrays, localStorage, propriedades: watch, computed, created. Manipula estados entre objetos com pendente e feito no array onde as tarefas são adicionadas.
 
 ## O que aprendeu
 
-Manipular conteudo entre componentes através da tag <slot> passando este conteudos através de html.
+Utilizar componentes avançados, emitir eventos entre os componentes, manipular array, manipular eventos, utilizar o SASS.
 
 ## Construido com
 
@@ -35,41 +35,13 @@ Framework Vue.JS
 HTML5
 CSS3
 JavaScript
+SASS
 
 ## Autor
 
-- Copyright (c): [José Carlos Rodrigues Filho](https://github.com/JoseCarlos-Filho/Citacoes)
+- Copyright (c): [José Carlos Rodrigues Filho](https://github.com/JoseCarlos-Filho/Lista-Tarefa-VueJS2x)
+
 # Como-utilizar
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
 # todolist
 
 ## Project setup
